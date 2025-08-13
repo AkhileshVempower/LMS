@@ -1,0 +1,23 @@
+{
+  "name": "lms",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/AkhileshVempower/LMS#readme",
+  "bugs": {
+    "url": "https://github.com/AkhileshVempower/LMS/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AkhileshVempower/LMS.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
