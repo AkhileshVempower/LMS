@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
-import { registerForCourse } from "../services/registration";
+import { cancelRegistration, registerForCourse } from "../services/registration";
 
+//registering employee
 export const registerEmployee=async (req:Request,res:Response)=>{
 try{const {employee_name,email}=req.body
 const {course_id}=req.params
@@ -45,3 +46,28 @@ catch(error:any){
   }
 
 }
+
+
+// cancel registration
+
+
+
+export const cancelRegistrationController = async (req: Request, res: Response) => {
+  try {
+    const { registration_id } = req.params;
+
+    const result = await cancelRegistration(registration_id);
+
+    res.status(200).json({
+      status: 200,
+      message: "Registration cancelled successfully",
+      data: result,
+    });
+  } catch (error: any) {
+    res.status(500).json({
+      status: 500,
+      message: "Server Error",
+      error: error.message,
+    });
+  }
+};

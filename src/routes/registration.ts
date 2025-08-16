@@ -1,10 +1,11 @@
 import express from "express"
-import { registerEmployee } from "../controllers/registration"
+import { cancelRegistrationController, registerEmployee } from "../controllers/registration"
 
 
 const router=express.Router()
 
 
-router.post('/register/:course_id',registerEmployee)
+router.post('/add/register/:course_id',registerEmployee)
+router.delete("/:registration_id", cancelRegistrationController)
 
 export default router
