@@ -3,5 +3,5 @@ export interface Registration{
     employee_name:string,
     email:string,
     course_id:string
-    status:"ACCEPTED"|"COURSE_FULL_ERROR"
+    status:"ACCEPTED"|"COURSE_FULL_ERROR"|"COURSE_CANCELED"
 }
